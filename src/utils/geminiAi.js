@@ -1,0 +1,6 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_KEY || "");
+const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash-lite" });
+
+export default model;
